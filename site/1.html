@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon"  href="images/frame.png">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Yeon+Sung&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" > 
+	<title>DBOX</title>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+	    <div class="header_inner">
+		    <div class="header__logo">DBOX company</div>	
+		</div>
+	</div>
+</header>
+    
+
+<div class="intro">
+    <div class="container">
+	    <div class="intro__inner">
+		<img class="title1" src="images\1111.png">
+		
+            <h1 class="title2">За курс от DBOX Вы освоите полный цикл создания 3D-модели в программе Blender — от идеи до финального результата.<br></h1>
+		<h1 class="title3">	На курсе расскажут о:<br>
+- первичной настройке Blender;<br>
+- горячих клавишах, выделении объектов;<br>
+- геометрии, шейдинге, отсечении и перемещении вдоль границ;<br>
+- порядке на сцене, метрике, коллекциях, иерархии, автосохранении;<br>
+- материалах и текстурах, освещении, цветовом пространстве.</h1>
+			
+			<!-- ССЫЛКА НА ОКНО -->
+<button  class="btn" onClick="this.nextElementSibling.style.display='block';">Записаться на курс</button>
+ 
+<!-- ОКНО -->
+<div id="parent_popup_click1" class="parent_popup_click">
+  <div class="popup_click">
+<h2>Введите данные</h2>
+    <p><center> 
+	 <?php
+//проверяем, существуют ли переменные в массиве POST
+if(!isset($_POST['surname']) and !isset($_POST['name'] and !isset($_POST['phone'] and !isset($_POST['email'])){
+ ?> <form action="file:///C:/Users/vya4e/Desktop/site/site/1.html" method="post">
+<input type="text" class="txt" name="surname" placeholder="Укажите Вашу фамилию" required><br>
+<input type="text" class="txt" name="name" placeholder="Укажите имя" required><br>
+<input type="text" class="txt" name="phone" placeholder="Укажите № телефона" required><br>
+<input type="text" class="txt" name="email" placeholder="Укажите e-mail" required><br>
+<input type="submit" class="btn1" value="Отправить">
+</form> <?php
+} else {
+ //показываем форму
+ $surname = $_POST['surname'];
+ $name = $_POST['name'];
+ $phone = $_POST['phone'];
+ $email = $_POST['email'];
+ $surname = htmlspecialchars($surname);
+ $name = htmlspecialchars($name);
+ $phone = htmlspecialchars($phone);
+ $email = htmlspecialchars($email);
+ $surname = urldecode($surname);
+ $name = urldecode($name);
+ $phone = urldecode($phone);
+ $email = urldecode($email);
+ $surname = trim($surname);
+ $name = trim($name);
+ $phone = trim($phone);
+ $email = trim($email);
+ if (mail("dashakleina@mail.ru", "Заявка с сайта", "Фамилия:".$surname, "Имя:".$name, "Номер телефона".$phone". E-mail: ".$email ,"From: $email \r\n")){
+ echo "Сообщение успешно отправлено";
+ } else {
+ echo "При отправке сообщения возникли ошибки";
+ }
+if (mail("dashakleina@mail.ru", "Заявка с сайта", "Фамилия:".$surname, "Имя:".$name, "Номер телефона".$phone". E-mail: ".$email." Сообщение: ".$message ,"From: $email \r\n")){
+    mail($email, "Заявка с сайта", "Здравствуйте ".name". Вы оставили заявку на сайте. Мы предлагаем Вам начать обучение с 1 июля 2022 года. Оплату можно произвести через Сбер ID. Ждем Вас на нашем курсе;)","From: $email \r\n");
+    echo "Сообщение успешно отправлено";
+} else {
+    echo "При отправке сообщения возникли ошибки";
+}
+}
+?></center>
+    <a class="close" title="Закрыть" onclick="document.getElementById('parent_popup_click1').style.display='none';">X</a>
+</div>
+</div>
+		</div>
+    </div>
+</div><!-- /.intro -->
+
+
+<section class="section">
+    <div class="container">
+	    <div class="section__header">
+		    <h3 class="section__suptitle">3D</h3>
+			<h2 class="section__title">О курсе</h2>
+			<div class="section__text">
+			    <p> В результате прохождения курса от Dbox Вы будете уметь:<br>
+•работать с пакетами программных продуктов профессиональной направленности;<br>
+•использовать инструментальные средства программы при моделировании;<br>
+•настраивать и создавать материалы (текстуры);<br>
+•создавать сцену (окружение), настраивать камеры, освещение;<br>
+•настраивать параметры рендера;<br>
+•создавать основные 3D-объекты ;<br>
+•использовать основные инструменты при редактировании объектов;<br>
+•создавать простые сцены;<br>
+<br>
+Также, Вы будете знать:<br>
+•области применения 3D-моделирования;<br>
+•интерфейс редактора трёхмерной графики;<br>
+•виды модификаторов;<br>
+•принципы создания трёхмерных объектов;<br>
+•интерфейс и основные инструменты;<br>
+•основные горячие клавиши;<br>
+и все это в редакторе трёхмерной графики - Blender 3D. </p>
+					<div>
+				<h1 class="title4"><img src="images\blender.png" 
+		style="width:600px;" </h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<div class="ss3">
+    <div class="container">
+			<div class="ss3_title1">Ваша первая работа на курсе</div>
+		<div class="about">
+		<div class="about__item">
+            <div class="about__img1">
+			    <img src="images\slon1.png" alt="" >			
+				
+				</div>	
+
+
+           <div class="about__text">Вид сбоку</div>
+				
+		</div>
+		 <div class="about__item">
+            <div class="about__img2">
+			    <img src="images\slon2.png" alt="" >			
+				
+				</div>	
+				
+				<div class="about__text">Вид спереди</div>
+		</div>
+		
+		<div class="about__item">
+            <div class="about__img3">
+			    <img src="images\slon3.png" alt="" >			
+				
+				</div>	
+
+			<div class="about__text">Вид сбоку</div>				
+		</div>
+		</div>
+	</div>
+</div>
+
+<div class="osn">
+	 <div class="container">
+	<div class="osn_title">
+	Основатель
+	</div>
+		
+	<img class="osn_face" src="images\gleb.jpg">
+	<p class="osn_suptitle"> Алексеев Глеб </p> 
+	</div>
+</div>
+
+<div class="price">
+	 <div class="container">
+		<div class="allprice">
+		
+			<div class="price1"> 
+				<h1 class="txt1"> Пробное занятие </h1>
+					<h1 class="txt4">0 рублей</h1>
+						<h1 class="txt6">01 июля 2022</h1>
+			</div>
+			
+			<div class="price2">
+				<h1 class="txt1"> Базовый курс </h1>
+					<h1 class="txt2"><s>10.000</s> рублей</h1>
+						<h1 class="txt3">6.999 рублей</h1>
+							<h1 class="txt5">начало: 05 июля 2022<br>
+							длительность: 1 месяц</h1>
+			</div>
+			
+			<div class="price3">
+				<h1 class="txt1"> Курс для профи </h1>
+					<h1 class="txt2"><s>20.000</s> рублей</h1>
+						<h1 class="txt3">15.999 рублей</h1>
+							<h1 class="txt5">начало: 05 августа 2022<br>
+							длительность: 2 месяца</h1>
+					
+			</div>
+			
+		</div>	
+	</div>
+</div>
+
+<div class="statistics">
+    <div class="container">
+	
+	
+	 <div class="stat">
+	    <div class="stat__item">
+		    <div class="stat__text">контактная информация</div>
+						
+			<nav class="nav">
+			    <a class="nav__link" href="https://vk.com/gottliebb">Vk</a>
+				<a class="nav__link" href="https://instagram.com/ssssjue?igshid=YmMyMTA2M2Y=">Inst</a>
+				<a class="nav__link" href="https://telegram.im/@Dboxxx18" target="_blank">Telegram</a>
+		</div>
+	  </div>
+	 </div>
+	</div>
+   
+
+</body>
+</html>
